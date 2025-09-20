@@ -1,0 +1,133 @@
+/* src/BrowseShop.scss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.browse-shop-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background-color: #f9f9fc;
+    min-height: 100vh;
+    padding-top: 12rem;
+}
+
+
+
+.shop-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.shop-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: #333;
+}
+
+.shop-info-text h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.shop-info-text a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.shop-info-text a:hover {
+    text-decoration: underline;
+}
+
+.suggestions {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.suggestion-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.1);
+    transition: 0.2s ease-in-out;
+}
+
+.suggestion-card:hover {
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.product-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.view-shop{
+    padding: 0.4rem 0.8rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.follow-shop-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.follow-shop-btn:hover {
+    background-color: #38a169;
+}
+.shop-profile {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+    margin-bottom: 2rem;
+}
+
+.shop-profile-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.shop-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: #333;
+}
+
+.follow-shop-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: #4895bb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+html {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  font-family: 'Poppins', sans-serif;
+  height: 50%;
+  margin: auto;
+  width: 50%;
+  background: linear-gradient(to bottom right, #f0f4ff, #e0eaff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+// Top Logo and Title Section
+.header-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+// Middle Container Holding User and Seller Sections
+.second-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.user-box,
+.seller-box {
+  flex: 1;
+  min-width: 220px;
+  background:#f0f4ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.08);
+  transition: transform 0.2s;
+}
+
+.user-box:hover,
+.seller-box:hover {
+  transform: translateY(-4px);
+}
+
+.user-box h2,
+.seller-box h2 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.user-box button,
+.seller-box button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.user-box button:hover,
+.seller-box button:hover {
+  background: #5565d0;
+}
+
+@media (max-width: 768px) {
+  .second-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

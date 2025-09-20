@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.view-product-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    background-color: #f9f9fc;
+    min-height: 100vh;
+    padding-top: 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-details1,
+.shop-details,
+.reviews-section,
+.flag-section {
+    background: white;
+    margin:  auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 1200px;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.1);
+}
+
+.product-details1 h2,
+.shop-details h3 {
+    margin-bottom: 0.5rem;
+}
+
+.follow-btn,
+.wishlist-btn,
+.flag-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.follow-btn {
+    margin-left: auto;
+    background-color: #667eea;
+    color: white;
+}
+
+.wishlist-btn {
+    background-color: #ed8936;
+    color: white;
+}
+
+.flag-btn {
+    background-color: #f56565;
+    color: white;
+    margin-top: 0.8rem;
+}
+
+.follow-btn:hover {
+    background-color: #5a67d8;
+}
+
+.wishlist-btn:hover {
+    background-color: #dd6b20;
+}
+
+.flag-btn:hover {
+    background-color: #e53e3e;
+}
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follow-shop-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin: auto;
+    width: 30%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.follow-shop-btn:hover {
+    background-color: #38a169;
+}
+
+.reviews-section h3 {
+    margin-bottom: 1rem;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-rating {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.user-review-form {
+    margin-top: 1.5rem;
+    display: flex;
+    background-color: #f7fafc;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.user-review-form textarea {
+    resize: vertical;
+    min-height: 80px;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-review-form input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.user-review-form button {
+    align-self: flex-start;
+    padding: 0.4rem 1rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.user-review-form button:hover {
+    background-color: #5a67d8;
+}
+
+.flag-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+.review-card div {
+    color: #2d3748; // A dark gray-blue tone
+}
+
+.review-card strong {
+    color: #4c51bf; // Indigo shade for the name
+    font-weight: 600;
+}
+
+.review-card p {
+    color: #2d3748; // Slightly lighter shade for comment
+}
+
+.review-card .user-rating {
+    color: #805ad5; // Purple for rating
+    font-weight: 500;
+}
+.user-review-form {
+    background-color: #f0f4ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(100, 100, 255, 0.08);
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+    h4 {
+        margin-bottom: 1rem;
+        color: #2d3748;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        resize: vertical;
+        background-color: #fff;
+        color: #2d3748;
+    }
+
+    input[type='number'] {
+        width: 100%;
+        padding: 0.6rem;
+        margin-bottom: 1rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        background-color: #fff;
+        color: #2d3748;
+    }
+
+    button {
+        background-color: #667eea;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #5a67d8;
+        }
+    }
+}
+.flag-section {
+    background-color: #fff5f5;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 100, 100, 0.08);
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+    h3 {
+        margin-bottom: 1rem;
+        color: #c53030;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #feb2b2;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        resize: vertical;
+        background-color: #fff;
+        color: #2d3748;
+    }
+
+    .flag-btn {
+        background-color: #e53e3e;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #c53030;
+        }
+    }
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.like-dislike-buttons {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.85rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .like-btn {
+        background-color: #38a169; // green
+        color: white;
+
+        &:hover {
+            background-color: #2f855a;
+        }
+    }
+
+    .dislike-btn {
+        background-color: #e53e3e; // red
+        color: white;
+
+        &:hover {
+            background-color: #c53030;
+        }
+    }
+}
+
+.product-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .edit-product-btn {
+        padding: 0.4rem 0.8rem;
+        background-color: #3182ce;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #2b6cb0;
+        }
+    }
+}
+.user-review-form button:hover {
+    background-color: #5a67d8;
+}
+
+.user-review-form .delete-btn {
+    background-color: #e53e3e;  // Red color for delete
+    color: white;
+    margin-left: 1rem;
+}
+
+.user-review-form .delete-btn:hover {
+    background-color: #c53030;
+}
+.flag-section {
+    background-color: #f0f4ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(100, 100, 255, 0.08);
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+    h3 {
+        margin-bottom: 1rem;
+        color: #2d3748;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        .flag-count {
+            color: #4c51bf;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+
+    .flag-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            resize: vertical;
+            background-color: #fff;
+            color: #2d3748;
+        }
+
+        .flag-btn {
+            background-color: #e53e3e;
+            color: white;
+            border: none;
+            width: 15%;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #c53030;
+            }
+        }
+    }
+
+    .submitted-flag {
+        .flag-reason {
+            background-color: #f7fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #2d3748;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .flag-actions {
+            display: flex;
+            gap: 1rem;
+
+            button {
+                padding: 0.4rem 0.8rem;
+                border-radius: 6px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            button:first-child {
+                background-color: #667eea;
+                color: white;
+            }
+
+            button:last-child {
+                background-color: #f56565;
+                color: white;
+            }
+
+            button:hover {
+                background-color: #5a67d8;
+            }
+
+            button:last-child:hover {
+                background-color: #e53e3e;
+            }
+        }
+    }
+}
+.delete-btn
+{
+    background-color: #e53e3e;
+            color: white;
+            border: none;
+            margin-left: auto ;
+            width: 10%;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #c53030;
+            }
+}

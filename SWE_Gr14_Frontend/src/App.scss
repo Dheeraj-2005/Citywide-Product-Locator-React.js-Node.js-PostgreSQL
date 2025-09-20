@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Color Variables */
+// :root {
+//   --brand-color: #667eea;
+//   --brand-accent: #764ba2;
+//   --button-color: #5a67d8;
+//   --background: #f5f6fa;
+//   --card-bg: #fff;
+//   --card-shadow: 0 4px 24px rgba(0,0,0,0.07);
+//   --border-radius: 16px;
+//   --text-dark: #22223b;
+//   --text-light: #888;
+// }
+
+/* Reset and Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+// Root styles (optional, for consistency)
+html {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

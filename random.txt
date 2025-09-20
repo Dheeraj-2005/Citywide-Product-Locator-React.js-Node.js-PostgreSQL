@@ -1,0 +1,1261 @@
+backend-1  | Starting psql service...
+backend-1  | Creating database...
+backend-1  | CREATE DATABASE
+backend-1  | You are now connected to database "swe_db" as user "postgres".
+backend-1  | CREATE TABLE
+backend-1  | CREATE TABLE
+backend-1  | CREATE TABLE
+backend-1  | CREATE TABLE
+backend-1  | CREATE TABLE
+backend-1  | Tables formed
+backend-1  | Collecting psycopg2-binary==2.9.10
+backend-1  |   Downloading psycopg2_binary-2.9.10-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.9 MB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 120.7 kB/s eta 0:00:00
+backend-1  | Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 2)) (1.1.0)
+backend-1  | Collecting cryptography
+backend-1  |   Downloading cryptography-44.0.2-cp39-abi3-manylinux_2_34_aarch64.whl (4.0 MB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 2.2 MB/s eta 0:00:00
+backend-1  | Collecting bcrypt
+backend-1  |   Downloading bcrypt-4.3.0-cp39-abi3-manylinux_2_34_aarch64.whl (279 kB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 279.2/279.2 KB 12.9 MB/s eta 0:00:00
+backend-1  | Collecting pycryptodome
+backend-1  |   Downloading pycryptodome-3.22.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.2 MB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 635.4 kB/s eta 0:00:00
+backend-1  | Collecting cffi>=1.12
+backend-1  |   Downloading cffi-1.17.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (448 kB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 448.2/448.2 KB 9.0 MB/s eta 0:00:00
+backend-1  | Collecting pycparser
+backend-1  |   Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+backend-1  |      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 KB 8.3 MB/s eta 0:00:00
+backend-1  | Installing collected packages: pycryptodome, pycparser, psycopg2-binary, bcrypt, cffi, cryptography
+backend-1  | Successfully installed bcrypt-4.3.0 cffi-1.17.1 cryptography-44.0.2 psycopg2-binary-2.9.10 pycparser-2.22 pycryptodome-3.22.0
+backend-1  | WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+backend-1  | 
+backend-1  |    FastAPI   Starting development server 🚀
+backend-1  |  
+backend-1  |              Searching for package file structure from directories with         
+backend-1  |              __init__.py files                                                  
+backend-1  | 
+backend-1  | ╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/cli.py:245 in dev        │
+backend-1  | │                                                                              │
+backend-1  | │   242 │                                                                      │
+backend-1  | │   243 │   Otherwise, it uses the first [bold]FastAPI[/bold] app found in the │
+backend-1  | │   244 │   """                                                                │
+backend-1  | │ ❱ 245 │   _run(                                                              │
+backend-1  | │   246 │   │   path=path,                                                     │
+backend-1  | │   247 │   │   host=host,                                                     │
+backend-1  | │   248 │   │   port=port,                                                     │
+backend-1  | │                                                                              │
+backend-1  | │ ╭─────────────── locals ───────────────╮                                     │
+backend-1  | │ │           app = None                 │                                     │
+backend-1  | │ │          host = '0.0.0.0'            │                                     │
+backend-1  | │ │          path = PosixPath('main.py') │                                     │
+backend-1  | │ │          port = 8000                 │                                     │
+backend-1  | │ │ proxy_headers = True                 │                                     │
+backend-1  | │ │        reload = True                 │                                     │
+backend-1  | │ │     root_path = ''                   │                                     │
+backend-1  | │ ╰──────────────────────────────────────╯                                     │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/cli.py:101 in _run       │
+backend-1  | │                                                                              │
+backend-1  | │    98 │   │   )                                                              │
+backend-1  | │    99 │   │                                                                  │
+backend-1  | │   100 │   │   try:                                                           │
+backend-1  | │ ❱ 101 │   │   │   import_data = get_import_data(path=path, app_name=app)     │
+backend-1  | │   102 │   │   except FastAPICLIException as e:                               │
+backend-1  | │   103 │   │   │   toolkit.print_line()                                       │
+backend-1  | │   104 │   │   │   toolkit.print(f"[error]{e}")                               │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │           app = None                                                     │ │
+backend-1  | │ │       command = 'dev'                                                    │ │
+backend-1  | │ │          host = '0.0.0.0'                                                │ │
+backend-1  | │ │          path = PosixPath('main.py')                                     │ │
+backend-1  | │ │          port = 8000                                                     │ │
+backend-1  | │ │ proxy_headers = True                                                     │ │
+backend-1  | │ │        reload = True                                                     │ │
+backend-1  | │ │     root_path = ''                                                       │ │
+backend-1  | │ │   server_type = 'development'                                            │ │
+backend-1  | │ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
+backend-1  | │ │                 0xffff90768bb0>                                          │ │
+backend-1  | │ │       workers = None                                                     │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/discover.py:126 in       │
+backend-1  | │ get_import_data                                                              │
+backend-1  | │                                                                              │
+backend-1  | │   123 │   │   raise FastAPICLIException(f"Path does not exist {path}")       │
+backend-1  | │   124 │   mod_data = get_module_data_from_path(path)                         │
+backend-1  | │   125 │   sys.path.insert(0, str(mod_data.extra_sys_path))                   │
+backend-1  | │ ❱ 126 │   use_app_name = get_app_name(mod_data=mod_data, app_name=app_name)  │
+backend-1  | │   127 │                                                                      │
+backend-1  | │   128 │   import_string = f"{mod_data.module_import_str}:{use_app_name}"     │
+backend-1  | │   129                                                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ app_name = None                                                          │ │
+backend-1  | │ │ mod_data = ModuleData(                                                   │ │
+backend-1  | │ │            │   module_import_str='main',                                 │ │
+backend-1  | │ │            │   extra_sys_path=PosixPath('/Documents/SWE_Gr14/backend'),  │ │
+backend-1  | │ │            │   module_paths=[                                            │ │
+backend-1  | │ │            │   │   PosixPath('/Documents/SWE_Gr14/backend/main.py')      │ │
+backend-1  | │ │            │   ]                                                         │ │
+backend-1  | │ │            )                                                             │ │
+backend-1  | │ │     path = PosixPath('main.py')                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/discover.py:70 in        │
+backend-1  | │ get_app_name                                                                 │
+backend-1  | │                                                                              │
+backend-1  | │    67                                                                        │
+backend-1  | │    68 def get_app_name(*, mod_data: ModuleData, app_name: Union[str, None] = │
+backend-1  | │    69 │   try:                                                               │
+backend-1  | │ ❱  70 │   │   mod = importlib.import_module(mod_data.module_import_str)      │
+backend-1  | │    71 │   except (ImportError, ValueError) as e:                             │
+backend-1  | │    72 │   │   logger.error(f"Import error: {e}")                             │
+backend-1  | │    73 │   │   logger.warning(                                                │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ app_name = None                                                          │ │
+backend-1  | │ │ mod_data = ModuleData(                                                   │ │
+backend-1  | │ │            │   module_import_str='main',                                 │ │
+backend-1  | │ │            │   extra_sys_path=PosixPath('/Documents/SWE_Gr14/backend'),  │ │
+backend-1  | │ │            │   module_paths=[                                            │ │
+backend-1  | │ │            │   │   PosixPath('/Documents/SWE_Gr14/backend/main.py')      │ │
+backend-1  | │ │            │   ]                                                         │ │
+backend-1  | │ │            )                                                             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/lib/python3.10/importlib/__init__.py:126 in import_module               │
+backend-1  | │                                                                              │
+backend-1  | │   123 │   │   │   if character != '.':                                       │
+backend-1  | │   124 │   │   │   │   break                                                  │
+backend-1  | │   125 │   │   │   level += 1                                                 │
+backend-1  | │ ❱ 126 │   return _bootstrap._gcd_import(name[level:], package, level)        │
+backend-1  | │   127                                                                        │
+backend-1  | │   128                                                                        │
+backend-1  | │   129 _RELOADING = {}                                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───── locals ─────╮                                                         │
+backend-1  | │ │   level = 0      │                                                         │
+backend-1  | │ │    name = 'main' │                                                         │
+backend-1  | │ │ package = None   │                                                         │
+backend-1  | │ ╰──────────────────╯                                                         │
+backend-1  | │ in _gcd_import:1050                                                          │
+backend-1  | │ ╭───── locals ─────╮                                                         │
+backend-1  | │ │   level = 0      │                                                         │
+backend-1  | │ │    name = 'main' │                                                         │
+backend-1  | │ │ package = None   │                                                         │
+backend-1  | │ ╰──────────────────╯                                                         │
+backend-1  | │ in _find_and_load:1027                                                       │
+backend-1  | │ ╭────────────────── locals ──────────────────╮                               │
+backend-1  | │ │ module = <object object at 0xffff92a24060> │                               │
+backend-1  | │ │   name = 'main'                            │                               │
+backend-1  | │ ╰────────────────────────────────────────────╯                               │
+backend-1  | │ in _find_and_load_unlocked:1006                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │   name = 'main'                                                          │ │
+backend-1  | │ │ parent = ''                                                              │ │
+backend-1  | │ │   path = None                                                            │ │
+backend-1  | │ │   spec = ModuleSpec(name='main',                                         │ │
+backend-1  | │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+backend-1  | │ │          0xffff90768fd0>, origin='/Documents/SWE_Gr14/backend/main.py')  │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in _load_unlocked:688                                                        │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ module = <module 'main' from '/Documents/SWE_Gr14/backend/main.py'>      │ │
+backend-1  | │ │   spec = ModuleSpec(name='main',                                         │ │
+backend-1  | │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+backend-1  | │ │          0xffff90768fd0>, origin='/Documents/SWE_Gr14/backend/main.py')  │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in exec_module:883                                                           │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │   code = <code object <module> at 0xffff90790240, file                   │ │
+backend-1  | │ │          "/Documents/SWE_Gr14/backend/main.py", line 1>                  │ │
+backend-1  | │ │ module = <module 'main' from '/Documents/SWE_Gr14/backend/main.py'>      │ │
+backend-1  | │ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
+backend-1  | │ │          0xffff90768fd0>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in _call_with_frames_removed:241                                             │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ args = (                                                                 │ │
+backend-1  | │ │        │   <code object <module> at 0xffff90790240, file                 │ │
+backend-1  | │ │        "/Documents/SWE_Gr14/backend/main.py", line 1>,                   │ │
+backend-1  | │ │        │   {                                                             │ │
+backend-1  | │ │        │   │   '__name__': 'main',                                       │ │
+backend-1  | │ │        │   │   '__doc__': None,                                          │ │
+backend-1  | │ │        │   │   '__package__': '',                                        │ │
+backend-1  | │ │        │   │   '__loader__':                                             │ │
+backend-1  | │ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
+backend-1  | │ │        0xffff90768fd0>,                                                  │ │
+backend-1  | │ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
+backend-1  | │ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
+backend-1  | │ │        0xffff90768fd0>, origin='/Documents/SWE_Gr14/backend/main.py'),   │ │
+backend-1  | │ │        │   │   '__file__': '/Documents/SWE_Gr14/backend/main.py',        │ │
+backend-1  | │ │        │   │   '__cached__':                                             │ │
+backend-1  | │ │        '/Documents/SWE_Gr14/backend/__pycache__/main.cpython-310.pyc',   │ │
+backend-1  | │ │        │   │   '__builtins__': {                                         │ │
+backend-1  | │ │        │   │   │   '__name__': 'builtins',                               │ │
+backend-1  | │ │        │   │   │   '__doc__': 'Built-in functions, exceptions, and other │ │
+backend-1  | │ │        objects.\n\nNoteworthy: None is the `nil'+46,                     │ │
+backend-1  | │ │        │   │   │   '__package__': '',                                    │ │
+backend-1  | │ │        │   │   │   '__loader__': <class                                  │ │
+backend-1  | │ │        '_frozen_importlib.BuiltinImporter'>,                             │ │
+backend-1  | │ │        │   │   │   '__spec__': ModuleSpec(name='builtins', loader=<class │ │
+backend-1  | │ │        '_frozen_importlib.BuiltinImporter'>, origin='built-in'),         │ │
+backend-1  | │ │        │   │   │   '__build_class__': <built-in function                 │ │
+backend-1  | │ │        __build_class__>,                                                 │ │
+backend-1  | │ │        │   │   │   '__import__': <built-in function __import__>,         │ │
+backend-1  | │ │        │   │   │   'abs': <built-in function abs>,                       │ │
+backend-1  | │ │        │   │   │   'all': <built-in function all>,                       │ │
+backend-1  | │ │        │   │   │   'any': <built-in function any>,                       │ │
+backend-1  | │ │        │   │   │   ... +145                                              │ │
+backend-1  | │ │        │   │   },                                                        │ │
+backend-1  | │ │        │   │   'FastAPI': <class 'fastapi.applications.FastAPI'>,        │ │
+backend-1  | │ │        │   │   'Depends': <function Depends at 0xffff9094a7a0>,          │ │
+backend-1  | │ │        │   │   ... +3                                                    │ │
+backend-1  | │ │        │   }                                                             │ │
+backend-1  | │ │        )                                                                 │ │
+backend-1  | │ │    f = <built-in function exec>                                          │ │
+backend-1  | │ │ kwds = {}                                                                │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/main.py:3 in <module>                            │
+backend-1  | │                                                                              │
+backend-1  | │    1 from fastapi import FastAPI, Depends, UploadFile, Header                │
+backend-1  | │    2 from fastapi.middleware.cors import CORSMiddleware                      │
+backend-1  | │ ❱  3 from functions import tasks2 as tasks                                   │
+backend-1  | │    4 from models import models                                               │
+backend-1  | │    5                                                                         │
+backend-1  | │    6 app = FastAPI()                                                         │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/functions/tasks2.py:1 in <module>                │
+backend-1  | │                                                                              │
+backend-1  | │ ❱   1 from models import models                                              │
+backend-1  | │     2 from dotenv import load_dotenv                                         │
+backend-1  | │     3 from . import database                                                 │
+backend-1  | │     4 import bcrypt                                                          │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/models/models.py:36 in <module>                  │
+backend-1  | │                                                                              │
+backend-1  | │   33 class C_GetProfile(BaseModel):                                          │
+backend-1  | │   34 │   user_id: str                                                        │
+backend-1  | │   35                                                                         │
+backend-1  | │ ❱ 36 class C_Product(BaseModel):                                             │
+backend-1  | │   37 │   user_id: str                                                        │
+backend-1  | │   38 │   product_name: str                                                   │
+backend-1  | │   39 │   product_price: str                                                  │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_model_constructi │
+backend-1  | │ on.py:237 in __new__                                                         │
+backend-1  | │                                                                              │
+backend-1  | │   234 │   │   │   else:                                                      │
+backend-1  | │   235 │   │   │   │   # Any operation that requires accessing the field info │
+backend-1  | │   236 │   │   │   │   # `complete_model_class()`:                            │
+backend-1  | │ ❱ 237 │   │   │   │   complete_model_class(                                  │
+backend-1  | │   238 │   │   │   │   │   cls,                                               │
+backend-1  | │   239 │   │   │   │   │   config_wrapper,                                    │
+backend-1  | │   240 │   │   │   │   │   raise_errors=False,                                │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │    _create_model_module = None                                           │ │
+backend-1  | │ │        base_field_names = set()                                          │ │
+backend-1  | │ │ base_private_attributes = {}                                             │ │
+backend-1  | │ │                   bases = (<class 'pydantic.main.BaseModel'>,)           │ │
+backend-1  | │ │              class_vars = set()                                          │ │
+backend-1  | │ │                cls_name = 'C_Product'                                    │ │
+backend-1  | │ │          config_wrapper = ConfigWrapper()                                │ │
+backend-1  | │ │                  kwargs = {}                                             │ │
+backend-1  | │ │                     mro = (                                              │ │
+backend-1  | │ │                           │   <class 'models.models.C_Product'>,         │ │
+backend-1  | │ │                           │   <class 'pydantic.main.BaseModel'>,         │ │
+backend-1  | │ │                           │   <class 'object'>                           │ │
+backend-1  | │ │                           )                                              │ │
+backend-1  | │ │               namespace = {                                              │ │
+backend-1  | │ │                           │   '__module__': 'models.models',             │ │
+backend-1  | │ │                           │   '__qualname__': 'C_Product',               │ │
+backend-1  | │ │                           │   '__annotations__': {                       │ │
+backend-1  | │ │                           │   │   'user_id': <class 'str'>,              │ │
+backend-1  | │ │                           │   │   'product_name': <class 'str'>,         │ │
+backend-1  | │ │                           │   │   'product_price': <class 'str'>,        │ │
+backend-1  | │ │                           │   │   'product_rating': <class 'int'>,       │ │
+backend-1  | │ │                           │   │   'product_description': <class 'str'>,  │ │
+backend-1  | │ │                           │   │   'product_stock': <class 'str'>,        │ │
+backend-1  | │ │                           │   │   'product_review': <class 'str'>,       │ │
+backend-1  | │ │                           │   │   'product_images': list[str],           │ │
+backend-1  | │ │                           │   │   'shop_name': <class 'str'>,            │ │
+backend-1  | │ │                           │   │   'shop_rating': <class 'int'>,          │ │
+backend-1  | │ │                           │   │   ... +8                                 │ │
+backend-1  | │ │                           │   },                                         │ │
+backend-1  | │ │                           │   'model_config': {},                        │ │
+backend-1  | │ │                           │   '__class_vars__': set(),                   │ │
+backend-1  | │ │                           │   '__private_attributes__': {}               │ │
+backend-1  | │ │                           }                                              │ │
+backend-1  | │ │             ns_resolver = <pydantic._internal._namespace_utils.NsResolv… │ │
+backend-1  | │ │                           object at 0xffff90795600>                      │ │
+backend-1  | │ │              parameters = ()                                             │ │
+backend-1  | │ │        parent_namespace = None                                           │ │
+backend-1  | │ │       parent_parameters = ()                                             │ │
+backend-1  | │ │      private_attributes = {}                                             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_model_constructi │
+backend-1  | │ on.py:597 in complete_model_class                                            │
+backend-1  | │                                                                              │
+backend-1  | │   594 │   )                                                                  │
+backend-1  | │   595 │                                                                      │
+backend-1  | │   596 │   try:                                                               │
+backend-1  | │ ❱ 597 │   │   schema = gen_schema.generate_schema(cls)                       │
+backend-1  | │   598 │   except PydanticUndefinedAnnotation as e:                           │
+backend-1  | │   599 │   │   if raise_errors:                                               │
+backend-1  | │   600 │   │   │   raise                                                      │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │      config_wrapper = ConfigWrapper()                                    │ │
+backend-1  | │ │ create_model_module = None                                               │ │
+backend-1  | │ │          gen_schema = <pydantic._internal._generate_schema.GenerateSche… │ │
+backend-1  | │ │                       object at 0xffff907ac270>                          │ │
+backend-1  | │ │         ns_resolver = <pydantic._internal._namespace_utils.NsResolver    │ │
+backend-1  | │ │                       object at 0xffff90795600>                          │ │
+backend-1  | │ │        raise_errors = False                                              │ │
+backend-1  | │ │        typevars_map = {}                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:706 in generate_schema                                                    │
+backend-1  | │                                                                              │
+backend-1  | │    703 │   │   schema = self._generate_schema_from_get_schema_method(obj, ob │
+backend-1  | │    704 │   │                                                                 │
+backend-1  | │    705 │   │   if schema is None:                                            │
+backend-1  | │ ❱  706 │   │   │   schema = self._generate_schema_inner(obj)                 │
+backend-1  | │    707 │   │                                                                 │
+backend-1  | │    708 │   │   metadata_js_function = _extract_get_pydantic_json_schema(obj) │
+backend-1  | │    709 │   │   if metadata_js_function is not None:                          │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ schema = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff907ac270>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:999 in _generate_schema_inner                                             │
+backend-1  | │                                                                              │
+backend-1  | │    996 │   │                                                                 │
+backend-1  | │    997 │   │   if lenient_issubclass(obj, BaseModel):                        │
+backend-1  | │    998 │   │   │   with self.model_type_stack.push(obj):                     │
+backend-1  | │ ❱  999 │   │   │   │   return self._model_schema(obj)                        │
+backend-1  | │   1000 │   │                                                                 │
+backend-1  | │   1001 │   │   if isinstance(obj, PydanticRecursiveRef):                     │
+backend-1  | │   1002 │   │   │   return core_schema.definition_reference_schema(schema_ref │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff907ac270>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:832 in _model_schema                                                      │
+backend-1  | │                                                                              │
+backend-1  | │    829 │   │   │   │   │   )                                                 │
+backend-1  | │    830 │   │   │   │   else:                                                 │
+backend-1  | │    831 │   │   │   │   │   fields_schema: core_schema.CoreSchema = core_sche │
+backend-1  | │ ❱  832 │   │   │   │   │   │   {k: self._generate_md_field_schema(k, v, deco │
+backend-1  | │    833 │   │   │   │   │   │   computed_fields=[                             │
+backend-1  | │    834 │   │   │   │   │   │   │   self._computed_field_schema(d, decorators │
+backend-1  | │    835 │   │   │   │   │   │   │   for d in computed_fields.values()         │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │    computed_fields = {}                                                  │ │
+backend-1  | │ │     config_wrapper = ConfigWrapper()                                     │ │
+backend-1  | │ │        core_config = {'title': 'C_Product'}                              │ │
+backend-1  | │ │         decorators = DecoratorInfos(                                     │ │
+backend-1  | │ │                      │   validators={},                                  │ │
+backend-1  | │ │                      │   field_validators={},                            │ │
+backend-1  | │ │                      │   root_validators={},                             │ │
+backend-1  | │ │                      │   field_serializers={},                           │ │
+backend-1  | │ │                      │   model_serializers={},                           │ │
+backend-1  | │ │                      │   model_validators={},                            │ │
+backend-1  | │ │                      │   computed_fields={}                              │ │
+backend-1  | │ │                      )                                                   │ │
+backend-1  | │ │ extras_keys_schema = None                                                │ │
+backend-1  | │ │      extras_schema = None                                                │ │
+backend-1  | │ │             fields = {                                                   │ │
+backend-1  | │ │                      │   'user_id': FieldInfo(                           │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_name': FieldInfo(                      │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_price': FieldInfo(                     │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_rating': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=int,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_description': FieldInfo(               │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_stock': FieldInfo(                     │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_review': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_images': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=list[str],                       │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'shop_name': FieldInfo(                         │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'shop_rating': FieldInfo(                       │ │
+backend-1  | │ │                      │   │   annotation=int,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   ... +8                                          │ │
+backend-1  | │ │                      }                                                   │ │
+backend-1  | │ │     generic_origin = None                                                │ │
+backend-1  | │ │       maybe_schema = None                                                │ │
+backend-1  | │ │          model_ref = 'models.models.C_Product:187650784958576'           │ │
+backend-1  | │ │   model_validators = dict_values([])                                     │ │
+backend-1  | │ │             schema = None                                                │ │
+backend-1  | │ │               self = <pydantic._internal._generate_schema.GenerateSchema │ │
+backend-1  | │ │                      object at 0xffff907ac270>                           │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:832 in <dictcomp>                                                         │
+backend-1  | │                                                                              │
+backend-1  | │    829 │   │   │   │   │   )                                                 │
+backend-1  | │    830 │   │   │   │   else:                                                 │
+backend-1  | │    831 │   │   │   │   │   fields_schema: core_schema.CoreSchema = core_sche │
+backend-1  | │ ❱  832 │   │   │   │   │   │   {k: self._generate_md_field_schema(k, v, deco │
+backend-1  | │    833 │   │   │   │   │   │   computed_fields=[                             │
+backend-1  | │    834 │   │   │   │   │   │   │   self._computed_field_schema(d, decorators │
+backend-1  | │    835 │   │   │   │   │   │   │   for d in computed_fields.values()         │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │         .0 = <dict_itemiterator object at 0xffff907ac310>                │ │
+backend-1  | │ │ decorators = DecoratorInfos(                                             │ │
+backend-1  | │ │              │   validators={},                                          │ │
+backend-1  | │ │              │   field_validators={},                                    │ │
+backend-1  | │ │              │   root_validators={},                                     │ │
+backend-1  | │ │              │   field_serializers={},                                   │ │
+backend-1  | │ │              │   model_serializers={},                                   │ │
+backend-1  | │ │              │   model_validators={},                                    │ │
+backend-1  | │ │              │   computed_fields={}                                      │ │
+backend-1  | │ │              )                                                           │ │
+backend-1  | │ │          k = 'product_category'                                          │ │
+backend-1  | │ │       self = <pydantic._internal._generate_schema.GenerateSchema object  │ │
+backend-1  | │ │              at 0xffff907ac270>                                          │ │
+backend-1  | │ │          v = FieldInfo(annotation=SystemError, required=True)            │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1201 in _generate_md_field_schema                                         │
+backend-1  | │                                                                              │
+backend-1  | │   1198 │   │   decorators: DecoratorInfos,                                   │
+backend-1  | │   1199 │   ) -> core_schema.ModelField:                                      │
+backend-1  | │   1200 │   │   """Prepare a ModelField to represent a model field."""        │
+backend-1  | │ ❱ 1201 │   │   common_field = self._common_field_schema(name, field_info, de │
+backend-1  | │   1202 │   │   return core_schema.model_field(                               │
+backend-1  | │   1203 │   │   │   common_field['schema'],                                   │
+backend-1  | │   1204 │   │   │   serialization_exclude=common_field['serialization_exclude │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ decorators = DecoratorInfos(                                             │ │
+backend-1  | │ │              │   validators={},                                          │ │
+backend-1  | │ │              │   field_validators={},                                    │ │
+backend-1  | │ │              │   root_validators={},                                     │ │
+backend-1  | │ │              │   field_serializers={},                                   │ │
+backend-1  | │ │              │   model_serializers={},                                   │ │
+backend-1  | │ │              │   model_validators={},                                    │ │
+backend-1  | │ │              │   computed_fields={}                                      │ │
+backend-1  | │ │              )                                                           │ │
+backend-1  | │ │ field_info = FieldInfo(annotation=SystemError, required=True)            │ │
+backend-1  | │ │       name = 'product_category'                                          │ │
+backend-1  | │ │       self = <pydantic._internal._generate_schema.GenerateSchema object  │ │
+backend-1  | │ │              at 0xffff907ac270>                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1367 in _common_field_schema                                              │
+backend-1  | │                                                                              │
+backend-1  | │   1364 │   │   │   │   │   source_type, annotations + validators_from_decora │
+backend-1  | │   1365 │   │   │   │   )                                                     │
+backend-1  | │   1366 │   │   │   else:                                                     │
+backend-1  | │ ❱ 1367 │   │   │   │   schema = self._apply_annotations(                     │
+backend-1  | │   1368 │   │   │   │   │   source_type,                                      │
+backend-1  | │   1369 │   │   │   │   │   annotations + validators_from_decorators,         │
+backend-1  | │   1370 │   │   │   │   )                                                     │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │                annotations = []                                          │ │
+backend-1  | │ │                 decorators = DecoratorInfos(                             │ │
+backend-1  | │ │                              │   validators={},                          │ │
+backend-1  | │ │                              │   field_validators={},                    │ │
+backend-1  | │ │                              │   root_validators={},                     │ │
+backend-1  | │ │                              │   field_serializers={},                   │ │
+backend-1  | │ │                              │   model_serializers={},                   │ │
+backend-1  | │ │                              │   model_validators={},                    │ │
+backend-1  | │ │                              │   computed_fields={}                      │ │
+backend-1  | │ │                              )                                           │ │
+backend-1  | │ │                 field_info = FieldInfo(                                  │ │
+backend-1  | │ │                              │   annotation=SystemError,                 │ │
+backend-1  | │ │                              │   required=True                           │ │
+backend-1  | │ │                              )                                           │ │
+backend-1  | │ │                       name = 'product_category'                          │ │
+backend-1  | │ │                       self = <pydantic._internal._generate_schema.Gener… │ │
+backend-1  | │ │                              object at 0xffff907ac270>                   │ │
+backend-1  | │ │ validators_from_decorators = []                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:2279 in _apply_annotations                                                │
+backend-1  | │                                                                              │
+backend-1  | │   2276 │   │   │   │   get_inner_schema, annotation, pydantic_js_annotation_ │
+backend-1  | │   2277 │   │   │   )                                                         │
+backend-1  | │   2278 │   │                                                                 │
+backend-1  | │ ❱ 2279 │   │   schema = get_inner_schema(source_type)                        │
+backend-1  | │   2280 │   │   if pydantic_js_annotation_functions:                          │
+backend-1  | │   2281 │   │   │   core_metadata = schema.setdefault('metadata', {})         │
+backend-1  | │   2282 │   │   │   update_core_metadata(core_metadata, pydantic_js_annotatio │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │                      annotations = []                                    │ │
+backend-1  | │ │                 get_inner_schema = <pydantic._internal._schema_generati… │ │
+backend-1  | │ │                                    object at 0xffff90796140>             │ │
+backend-1  | │ │ pydantic_js_annotation_functions = []                                    │ │
+backend-1  | │ │                             self = <pydantic._internal._generate_schema… │ │
+backend-1  | │ │                                    object at 0xffff907ac270>             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_schema_generatio │
+backend-1  | │ n_shared.py:83 in __call__                                                   │
+backend-1  | │                                                                              │
+backend-1  | │    80 │   │   self._ref_mode = ref_mode                                      │
+backend-1  | │    81 │                                                                      │
+backend-1  | │    82 │   def __call__(self, source_type: Any, /) -> core_schema.CoreSchema: │
+backend-1  | │ ❱  83 │   │   schema = self._handler(source_type)                            │
+backend-1  | │    84 │   │   if self._ref_mode == 'to-def':                                 │
+backend-1  | │    85 │   │   │   ref = schema.get('ref')                                    │
+backend-1  | │    86 │   │   │   if ref is not None:                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._schema_generation_shared.CallbackGetCoreSch… │ │
+backend-1  | │ │        object at 0xffff90796140>                                         │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:2261 in inner_handler                                                     │
+backend-1  | │                                                                              │
+backend-1  | │   2258 │   │   │   schema = self._generate_schema_from_get_schema_method(obj │
+backend-1  | │   2259 │   │   │                                                             │
+backend-1  | │   2260 │   │   │   if schema is None:                                        │
+backend-1  | │ ❱ 2261 │   │   │   │   schema = self._generate_schema_inner(obj)             │
+backend-1  | │   2262 │   │   │                                                             │
+backend-1  | │   2263 │   │   │   metadata_js_function = _extract_get_pydantic_json_schema( │
+backend-1  | │   2264 │   │   │   if metadata_js_function is not None:                      │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ schema = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff907ac270>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1004 in _generate_schema_inner                                            │
+backend-1  | │                                                                              │
+backend-1  | │   1001 │   │   if isinstance(obj, PydanticRecursiveRef):                     │
+backend-1  | │   1002 │   │   │   return core_schema.definition_reference_schema(schema_ref │
+backend-1  | │   1003 │   │                                                                 │
+backend-1  | │ ❱ 1004 │   │   return self.match_type(obj)                                   │
+backend-1  | │   1005 │                                                                     │
+backend-1  | │   1006 │   def match_type(self, obj: Any) -> core_schema.CoreSchema:  # noqa │
+backend-1  | │   1007 │   │   """Main mapping of types to schemas.                          │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff907ac270>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1122 in match_type                                                        │
+backend-1  | │                                                                              │
+backend-1  | │   1119 │   │                                                                 │
+backend-1  | │   1120 │   │   if self._arbitrary_types:                                     │
+backend-1  | │   1121 │   │   │   return self._arbitrary_type_schema(obj)                   │
+backend-1  | │ ❱ 1122 │   │   return self._unknown_type_schema(obj)                         │
+backend-1  | │   1123 │                                                                     │
+backend-1  | │   1124 │   def _match_generic_type(self, obj: Any, origin: Any) -> CoreSchem │
+backend-1  | │   1125 │   │   # Need to handle generic dataclasses before looking for the s │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ origin = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff907ac270>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:634 in _unknown_type_schema                                               │
+backend-1  | │                                                                              │
+backend-1  | │    631 │   │   return core_schema.is_instance_schema(tp)                     │
+backend-1  | │    632 │                                                                     │
+backend-1  | │    633 │   def _unknown_type_schema(self, obj: Any) -> CoreSchema:           │
+backend-1  | │ ❱  634 │   │   raise PydanticSchemaGenerationError(                          │
+backend-1  | │    635 │   │   │   f'Unable to generate pydantic-core schema for {obj!r}. '  │
+backend-1  | │    636 │   │   │   'Set `arbitrary_types_allowed=True` in the model_config t │
+backend-1  | │    637 │   │   │   ' or implement `__get_pydantic_core_schema__` on your typ │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff907ac270>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | ╰──────────────────────────────────────────────────────────────────────────────╯
+backend-1  | PydanticSchemaGenerationError: Unable to generate pydantic-core schema for 
+backend-1  | <class 'SystemError'>. Set `arbitrary_types_allowed=True` in the model_config to
+backend-1  | ignore this error or implement `__get_pydantic_core_schema__` on your type to 
+backend-1  | fully support it.
+backend-1  | 
+backend-1  | If you got this error by calling handler(<some type>) within 
+backend-1  | `__get_pydantic_core_schema__` then you likely need to call 
+backend-1  | `handler.generate_schema(<some type>)` since we do not call 
+backend-1  | `__get_pydantic_core_schema__` on `<some type>` otherwise to avoid infinite 
+backend-1  | recursion.
+backend-1  | 
+backend-1  | For further information visit 
+backend-1  | https://errors.pydantic.dev/2.11/u/schema-for-unknown-type
+backend-1  | Starting psql service...
+backend-1  | Removed stale pid file.
+backend-1  | Creating database...
+backend-1  | psql:main.sql:1: ERROR:  database "swe_db" already exists
+backend-1  | You are now connected to database "swe_db" as user "postgres".
+backend-1  | psql:main.sql:9: ERROR:  relation "c_users" already exists
+backend-1  | psql:main.sql:16: ERROR:  relation "c_user_otp" already exists
+backend-1  | psql:main.sql:28: ERROR:  relation "c_profiles" already exists
+backend-1  | psql:main.sql:40: ERROR:  relation "c_shops" already exists
+backend-1  | psql:main.sql:64: ERROR:  relation "c_products" already exists
+backend-1  | Tables formed
+backend-1  | Requirement already satisfied: psycopg2-binary==2.9.10 in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 1)) (2.9.10)
+backend-1  | Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 2)) (1.1.0)
+backend-1  | Requirement already satisfied: cryptography in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 3)) (44.0.2)
+backend-1  | Requirement already satisfied: bcrypt in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 4)) (4.3.0)
+backend-1  | Requirement already satisfied: pycryptodome in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 5)) (3.22.0)
+backend-1  | Requirement already satisfied: cffi>=1.12 in /usr/local/lib/python3.10/dist-packages (from cryptography->-r requirements.txt (line 3)) (1.17.1)
+backend-1  | Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi>=1.12->cryptography->-r requirements.txt (line 3)) (2.22)
+backend-1  | WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+backend-1  | 
+backend-1  |    FastAPI   Starting development server 🚀
+backend-1  |  
+backend-1  |              Searching for package file structure from directories with         
+backend-1  |              __init__.py files                                                  
+backend-1  | 
+backend-1  | ╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/cli.py:245 in dev        │
+backend-1  | │                                                                              │
+backend-1  | │   242 │                                                                      │
+backend-1  | │   243 │   Otherwise, it uses the first [bold]FastAPI[/bold] app found in the │
+backend-1  | │   244 │   """                                                                │
+backend-1  | │ ❱ 245 │   _run(                                                              │
+backend-1  | │   246 │   │   path=path,                                                     │
+backend-1  | │   247 │   │   host=host,                                                     │
+backend-1  | │   248 │   │   port=port,                                                     │
+backend-1  | │                                                                              │
+backend-1  | │ ╭─────────────── locals ───────────────╮                                     │
+backend-1  | │ │           app = None                 │                                     │
+backend-1  | │ │          host = '0.0.0.0'            │                                     │
+backend-1  | │ │          path = PosixPath('main.py') │                                     │
+backend-1  | │ │          port = 8000                 │                                     │
+backend-1  | │ │ proxy_headers = True                 │                                     │
+backend-1  | │ │        reload = True                 │                                     │
+backend-1  | │ │     root_path = ''                   │                                     │
+backend-1  | │ ╰──────────────────────────────────────╯                                     │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/cli.py:101 in _run       │
+backend-1  | │                                                                              │
+backend-1  | │    98 │   │   )                                                              │
+backend-1  | │    99 │   │                                                                  │
+backend-1  | │   100 │   │   try:                                                           │
+backend-1  | │ ❱ 101 │   │   │   import_data = get_import_data(path=path, app_name=app)     │
+backend-1  | │   102 │   │   except FastAPICLIException as e:                               │
+backend-1  | │   103 │   │   │   toolkit.print_line()                                       │
+backend-1  | │   104 │   │   │   toolkit.print(f"[error]{e}")                               │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │           app = None                                                     │ │
+backend-1  | │ │       command = 'dev'                                                    │ │
+backend-1  | │ │          host = '0.0.0.0'                                                │ │
+backend-1  | │ │          path = PosixPath('main.py')                                     │ │
+backend-1  | │ │          port = 8000                                                     │ │
+backend-1  | │ │ proxy_headers = True                                                     │ │
+backend-1  | │ │        reload = True                                                     │ │
+backend-1  | │ │     root_path = ''                                                       │ │
+backend-1  | │ │   server_type = 'development'                                            │ │
+backend-1  | │ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
+backend-1  | │ │                 0xffff8e768bb0>                                          │ │
+backend-1  | │ │       workers = None                                                     │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/discover.py:126 in       │
+backend-1  | │ get_import_data                                                              │
+backend-1  | │                                                                              │
+backend-1  | │   123 │   │   raise FastAPICLIException(f"Path does not exist {path}")       │
+backend-1  | │   124 │   mod_data = get_module_data_from_path(path)                         │
+backend-1  | │   125 │   sys.path.insert(0, str(mod_data.extra_sys_path))                   │
+backend-1  | │ ❱ 126 │   use_app_name = get_app_name(mod_data=mod_data, app_name=app_name)  │
+backend-1  | │   127 │                                                                      │
+backend-1  | │   128 │   import_string = f"{mod_data.module_import_str}:{use_app_name}"     │
+backend-1  | │   129                                                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ app_name = None                                                          │ │
+backend-1  | │ │ mod_data = ModuleData(                                                   │ │
+backend-1  | │ │            │   module_import_str='main',                                 │ │
+backend-1  | │ │            │   extra_sys_path=PosixPath('/Documents/SWE_Gr14/backend'),  │ │
+backend-1  | │ │            │   module_paths=[                                            │ │
+backend-1  | │ │            │   │   PosixPath('/Documents/SWE_Gr14/backend/main.py')      │ │
+backend-1  | │ │            │   ]                                                         │ │
+backend-1  | │ │            )                                                             │ │
+backend-1  | │ │     path = PosixPath('main.py')                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/fastapi_cli/discover.py:70 in        │
+backend-1  | │ get_app_name                                                                 │
+backend-1  | │                                                                              │
+backend-1  | │    67                                                                        │
+backend-1  | │    68 def get_app_name(*, mod_data: ModuleData, app_name: Union[str, None] = │
+backend-1  | │    69 │   try:                                                               │
+backend-1  | │ ❱  70 │   │   mod = importlib.import_module(mod_data.module_import_str)      │
+backend-1  | │    71 │   except (ImportError, ValueError) as e:                             │
+backend-1  | │    72 │   │   logger.error(f"Import error: {e}")                             │
+backend-1  | │    73 │   │   logger.warning(                                                │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ app_name = None                                                          │ │
+backend-1  | │ │ mod_data = ModuleData(                                                   │ │
+backend-1  | │ │            │   module_import_str='main',                                 │ │
+backend-1  | │ │            │   extra_sys_path=PosixPath('/Documents/SWE_Gr14/backend'),  │ │
+backend-1  | │ │            │   module_paths=[                                            │ │
+backend-1  | │ │            │   │   PosixPath('/Documents/SWE_Gr14/backend/main.py')      │ │
+backend-1  | │ │            │   ]                                                         │ │
+backend-1  | │ │            )                                                             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/lib/python3.10/importlib/__init__.py:126 in import_module               │
+backend-1  | │                                                                              │
+backend-1  | │   123 │   │   │   if character != '.':                                       │
+backend-1  | │   124 │   │   │   │   break                                                  │
+backend-1  | │   125 │   │   │   level += 1                                                 │
+backend-1  | │ ❱ 126 │   return _bootstrap._gcd_import(name[level:], package, level)        │
+backend-1  | │   127                                                                        │
+backend-1  | │   128                                                                        │
+backend-1  | │   129 _RELOADING = {}                                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───── locals ─────╮                                                         │
+backend-1  | │ │   level = 0      │                                                         │
+backend-1  | │ │    name = 'main' │                                                         │
+backend-1  | │ │ package = None   │                                                         │
+backend-1  | │ ╰──────────────────╯                                                         │
+backend-1  | │ in _gcd_import:1050                                                          │
+backend-1  | │ ╭───── locals ─────╮                                                         │
+backend-1  | │ │   level = 0      │                                                         │
+backend-1  | │ │    name = 'main' │                                                         │
+backend-1  | │ │ package = None   │                                                         │
+backend-1  | │ ╰──────────────────╯                                                         │
+backend-1  | │ in _find_and_load:1027                                                       │
+backend-1  | │ ╭────────────────── locals ──────────────────╮                               │
+backend-1  | │ │ module = <object object at 0xffff909d4060> │                               │
+backend-1  | │ │   name = 'main'                            │                               │
+backend-1  | │ ╰────────────────────────────────────────────╯                               │
+backend-1  | │ in _find_and_load_unlocked:1006                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │   name = 'main'                                                          │ │
+backend-1  | │ │ parent = ''                                                              │ │
+backend-1  | │ │   path = None                                                            │ │
+backend-1  | │ │   spec = ModuleSpec(name='main',                                         │ │
+backend-1  | │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+backend-1  | │ │          0xffff8e768fd0>, origin='/Documents/SWE_Gr14/backend/main.py')  │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in _load_unlocked:688                                                        │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ module = <module 'main' from '/Documents/SWE_Gr14/backend/main.py'>      │ │
+backend-1  | │ │   spec = ModuleSpec(name='main',                                         │ │
+backend-1  | │ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+backend-1  | │ │          0xffff8e768fd0>, origin='/Documents/SWE_Gr14/backend/main.py')  │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in exec_module:883                                                           │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │   code = <code object <module> at 0xffff8e790240, file                   │ │
+backend-1  | │ │          "/Documents/SWE_Gr14/backend/main.py", line 1>                  │ │
+backend-1  | │ │ module = <module 'main' from '/Documents/SWE_Gr14/backend/main.py'>      │ │
+backend-1  | │ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
+backend-1  | │ │          0xffff8e768fd0>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │ in _call_with_frames_removed:241                                             │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ args = (                                                                 │ │
+backend-1  | │ │        │   <code object <module> at 0xffff8e790240, file                 │ │
+backend-1  | │ │        "/Documents/SWE_Gr14/backend/main.py", line 1>,                   │ │
+backend-1  | │ │        │   {                                                             │ │
+backend-1  | │ │        │   │   '__name__': 'main',                                       │ │
+backend-1  | │ │        │   │   '__doc__': None,                                          │ │
+backend-1  | │ │        │   │   '__package__': '',                                        │ │
+backend-1  | │ │        │   │   '__loader__':                                             │ │
+backend-1  | │ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
+backend-1  | │ │        0xffff8e768fd0>,                                                  │ │
+backend-1  | │ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
+backend-1  | │ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
+backend-1  | │ │        0xffff8e768fd0>, origin='/Documents/SWE_Gr14/backend/main.py'),   │ │
+backend-1  | │ │        │   │   '__file__': '/Documents/SWE_Gr14/backend/main.py',        │ │
+backend-1  | │ │        │   │   '__cached__':                                             │ │
+backend-1  | │ │        '/Documents/SWE_Gr14/backend/__pycache__/main.cpython-310.pyc',   │ │
+backend-1  | │ │        │   │   '__builtins__': {                                         │ │
+backend-1  | │ │        │   │   │   '__name__': 'builtins',                               │ │
+backend-1  | │ │        │   │   │   '__doc__': 'Built-in functions, exceptions, and other │ │
+backend-1  | │ │        objects.\n\nNoteworthy: None is the `nil'+46,                     │ │
+backend-1  | │ │        │   │   │   '__package__': '',                                    │ │
+backend-1  | │ │        │   │   │   '__loader__': <class                                  │ │
+backend-1  | │ │        '_frozen_importlib.BuiltinImporter'>,                             │ │
+backend-1  | │ │        │   │   │   '__spec__': ModuleSpec(name='builtins', loader=<class │ │
+backend-1  | │ │        '_frozen_importlib.BuiltinImporter'>, origin='built-in'),         │ │
+backend-1  | │ │        │   │   │   '__build_class__': <built-in function                 │ │
+backend-1  | │ │        __build_class__>,                                                 │ │
+backend-1  | │ │        │   │   │   '__import__': <built-in function __import__>,         │ │
+backend-1  | │ │        │   │   │   'abs': <built-in function abs>,                       │ │
+backend-1  | │ │        │   │   │   'all': <built-in function all>,                       │ │
+backend-1  | │ │        │   │   │   'any': <built-in function any>,                       │ │
+backend-1  | │ │        │   │   │   ... +145                                              │ │
+backend-1  | │ │        │   │   },                                                        │ │
+backend-1  | │ │        │   │   'FastAPI': <class 'fastapi.applications.FastAPI'>,        │ │
+backend-1  | │ │        │   │   'Depends': <function Depends at 0xffff8e94a7a0>,          │ │
+backend-1  | │ │        │   │   ... +3                                                    │ │
+backend-1  | │ │        │   }                                                             │ │
+backend-1  | │ │        )                                                                 │ │
+backend-1  | │ │    f = <built-in function exec>                                          │ │
+backend-1  | │ │ kwds = {}                                                                │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/main.py:3 in <module>                            │
+backend-1  | │                                                                              │
+backend-1  | │    1 from fastapi import FastAPI, Depends, UploadFile, Header                │
+backend-1  | │    2 from fastapi.middleware.cors import CORSMiddleware                      │
+backend-1  | │ ❱  3 from functions import tasks2 as tasks                                   │
+backend-1  | │    4 from models import models                                               │
+backend-1  | │    5                                                                         │
+backend-1  | │    6 app = FastAPI()                                                         │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/functions/tasks2.py:1 in <module>                │
+backend-1  | │                                                                              │
+backend-1  | │ ❱   1 from models import models                                              │
+backend-1  | │     2 from dotenv import load_dotenv                                         │
+backend-1  | │     3 from . import database                                                 │
+backend-1  | │     4 import bcrypt                                                          │
+backend-1  | │                                                                              │
+backend-1  | │ /Documents/SWE_Gr14/backend/models/models.py:36 in <module>                  │
+backend-1  | │                                                                              │
+backend-1  | │   33 class C_GetProfile(BaseModel):                                          │
+backend-1  | │   34 │   user_id: str                                                        │
+backend-1  | │   35                                                                         │
+backend-1  | │ ❱ 36 class C_Product(BaseModel):                                             │
+backend-1  | │   37 │   user_id: str                                                        │
+backend-1  | │   38 │   product_name: str                                                   │
+backend-1  | │   39 │   product_price: str                                                  │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_model_constructi │
+backend-1  | │ on.py:237 in __new__                                                         │
+backend-1  | │                                                                              │
+backend-1  | │   234 │   │   │   else:                                                      │
+backend-1  | │   235 │   │   │   │   # Any operation that requires accessing the field info │
+backend-1  | │   236 │   │   │   │   # `complete_model_class()`:                            │
+backend-1  | │ ❱ 237 │   │   │   │   complete_model_class(                                  │
+backend-1  | │   238 │   │   │   │   │   cls,                                               │
+backend-1  | │   239 │   │   │   │   │   config_wrapper,                                    │
+backend-1  | │   240 │   │   │   │   │   raise_errors=False,                                │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │    _create_model_module = None                                           │ │
+backend-1  | │ │        base_field_names = set()                                          │ │
+backend-1  | │ │ base_private_attributes = {}                                             │ │
+backend-1  | │ │                   bases = (<class 'pydantic.main.BaseModel'>,)           │ │
+backend-1  | │ │              class_vars = set()                                          │ │
+backend-1  | │ │                cls_name = 'C_Product'                                    │ │
+backend-1  | │ │          config_wrapper = ConfigWrapper()                                │ │
+backend-1  | │ │                  kwargs = {}                                             │ │
+backend-1  | │ │                     mro = (                                              │ │
+backend-1  | │ │                           │   <class 'models.models.C_Product'>,         │ │
+backend-1  | │ │                           │   <class 'pydantic.main.BaseModel'>,         │ │
+backend-1  | │ │                           │   <class 'object'>                           │ │
+backend-1  | │ │                           )                                              │ │
+backend-1  | │ │               namespace = {                                              │ │
+backend-1  | │ │                           │   '__module__': 'models.models',             │ │
+backend-1  | │ │                           │   '__qualname__': 'C_Product',               │ │
+backend-1  | │ │                           │   '__annotations__': {                       │ │
+backend-1  | │ │                           │   │   'user_id': <class 'str'>,              │ │
+backend-1  | │ │                           │   │   'product_name': <class 'str'>,         │ │
+backend-1  | │ │                           │   │   'product_price': <class 'str'>,        │ │
+backend-1  | │ │                           │   │   'product_rating': <class 'int'>,       │ │
+backend-1  | │ │                           │   │   'product_description': <class 'str'>,  │ │
+backend-1  | │ │                           │   │   'product_stock': <class 'str'>,        │ │
+backend-1  | │ │                           │   │   'product_review': <class 'str'>,       │ │
+backend-1  | │ │                           │   │   'product_images': list[str],           │ │
+backend-1  | │ │                           │   │   'shop_name': <class 'str'>,            │ │
+backend-1  | │ │                           │   │   'shop_rating': <class 'int'>,          │ │
+backend-1  | │ │                           │   │   ... +8                                 │ │
+backend-1  | │ │                           │   },                                         │ │
+backend-1  | │ │                           │   'model_config': {},                        │ │
+backend-1  | │ │                           │   '__class_vars__': set(),                   │ │
+backend-1  | │ │                           │   '__private_attributes__': {}               │ │
+backend-1  | │ │                           }                                              │ │
+backend-1  | │ │             ns_resolver = <pydantic._internal._namespace_utils.NsResolv… │ │
+backend-1  | │ │                           object at 0xffff8e7995d0>                      │ │
+backend-1  | │ │              parameters = ()                                             │ │
+backend-1  | │ │        parent_namespace = None                                           │ │
+backend-1  | │ │       parent_parameters = ()                                             │ │
+backend-1  | │ │      private_attributes = {}                                             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_model_constructi │
+backend-1  | │ on.py:597 in complete_model_class                                            │
+backend-1  | │                                                                              │
+backend-1  | │   594 │   )                                                                  │
+backend-1  | │   595 │                                                                      │
+backend-1  | │   596 │   try:                                                               │
+backend-1  | │ ❱ 597 │   │   schema = gen_schema.generate_schema(cls)                       │
+backend-1  | │   598 │   except PydanticUndefinedAnnotation as e:                           │
+backend-1  | │   599 │   │   if raise_errors:                                               │
+backend-1  | │   600 │   │   │   raise                                                      │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │      config_wrapper = ConfigWrapper()                                    │ │
+backend-1  | │ │ create_model_module = None                                               │ │
+backend-1  | │ │          gen_schema = <pydantic._internal._generate_schema.GenerateSche… │ │
+backend-1  | │ │                       object at 0xffff8e7ac180>                          │ │
+backend-1  | │ │         ns_resolver = <pydantic._internal._namespace_utils.NsResolver    │ │
+backend-1  | │ │                       object at 0xffff8e7995d0>                          │ │
+backend-1  | │ │        raise_errors = False                                              │ │
+backend-1  | │ │        typevars_map = {}                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:706 in generate_schema                                                    │
+backend-1  | │                                                                              │
+backend-1  | │    703 │   │   schema = self._generate_schema_from_get_schema_method(obj, ob │
+backend-1  | │    704 │   │                                                                 │
+backend-1  | │    705 │   │   if schema is None:                                            │
+backend-1  | │ ❱  706 │   │   │   schema = self._generate_schema_inner(obj)                 │
+backend-1  | │    707 │   │                                                                 │
+backend-1  | │    708 │   │   metadata_js_function = _extract_get_pydantic_json_schema(obj) │
+backend-1  | │    709 │   │   if metadata_js_function is not None:                          │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ schema = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff8e7ac180>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:999 in _generate_schema_inner                                             │
+backend-1  | │                                                                              │
+backend-1  | │    996 │   │                                                                 │
+backend-1  | │    997 │   │   if lenient_issubclass(obj, BaseModel):                        │
+backend-1  | │    998 │   │   │   with self.model_type_stack.push(obj):                     │
+backend-1  | │ ❱  999 │   │   │   │   return self._model_schema(obj)                        │
+backend-1  | │   1000 │   │                                                                 │
+backend-1  | │   1001 │   │   if isinstance(obj, PydanticRecursiveRef):                     │
+backend-1  | │   1002 │   │   │   return core_schema.definition_reference_schema(schema_ref │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff8e7ac180>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:832 in _model_schema                                                      │
+backend-1  | │                                                                              │
+backend-1  | │    829 │   │   │   │   │   )                                                 │
+backend-1  | │    830 │   │   │   │   else:                                                 │
+backend-1  | │    831 │   │   │   │   │   fields_schema: core_schema.CoreSchema = core_sche │
+backend-1  | │ ❱  832 │   │   │   │   │   │   {k: self._generate_md_field_schema(k, v, deco │
+backend-1  | │    833 │   │   │   │   │   │   computed_fields=[                             │
+backend-1  | │    834 │   │   │   │   │   │   │   self._computed_field_schema(d, decorators │
+backend-1  | │    835 │   │   │   │   │   │   │   for d in computed_fields.values()         │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │    computed_fields = {}                                                  │ │
+backend-1  | │ │     config_wrapper = ConfigWrapper()                                     │ │
+backend-1  | │ │        core_config = {'title': 'C_Product'}                              │ │
+backend-1  | │ │         decorators = DecoratorInfos(                                     │ │
+backend-1  | │ │                      │   validators={},                                  │ │
+backend-1  | │ │                      │   field_validators={},                            │ │
+backend-1  | │ │                      │   root_validators={},                             │ │
+backend-1  | │ │                      │   field_serializers={},                           │ │
+backend-1  | │ │                      │   model_serializers={},                           │ │
+backend-1  | │ │                      │   model_validators={},                            │ │
+backend-1  | │ │                      │   computed_fields={}                              │ │
+backend-1  | │ │                      )                                                   │ │
+backend-1  | │ │ extras_keys_schema = None                                                │ │
+backend-1  | │ │      extras_schema = None                                                │ │
+backend-1  | │ │             fields = {                                                   │ │
+backend-1  | │ │                      │   'user_id': FieldInfo(                           │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_name': FieldInfo(                      │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_price': FieldInfo(                     │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_rating': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=int,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_description': FieldInfo(               │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_stock': FieldInfo(                     │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_review': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'product_images': FieldInfo(                    │ │
+backend-1  | │ │                      │   │   annotation=list[str],                       │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'shop_name': FieldInfo(                         │ │
+backend-1  | │ │                      │   │   annotation=str,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   'shop_rating': FieldInfo(                       │ │
+backend-1  | │ │                      │   │   annotation=int,                             │ │
+backend-1  | │ │                      │   │   required=True                               │ │
+backend-1  | │ │                      │   ),                                              │ │
+backend-1  | │ │                      │   ... +8                                          │ │
+backend-1  | │ │                      }                                                   │ │
+backend-1  | │ │     generic_origin = None                                                │ │
+backend-1  | │ │       maybe_schema = None                                                │ │
+backend-1  | │ │          model_ref = 'models.models.C_Product:187651698377632'           │ │
+backend-1  | │ │   model_validators = dict_values([])                                     │ │
+backend-1  | │ │             schema = None                                                │ │
+backend-1  | │ │               self = <pydantic._internal._generate_schema.GenerateSchema │ │
+backend-1  | │ │                      object at 0xffff8e7ac180>                           │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:832 in <dictcomp>                                                         │
+backend-1  | │                                                                              │
+backend-1  | │    829 │   │   │   │   │   )                                                 │
+backend-1  | │    830 │   │   │   │   else:                                                 │
+backend-1  | │    831 │   │   │   │   │   fields_schema: core_schema.CoreSchema = core_sche │
+backend-1  | │ ❱  832 │   │   │   │   │   │   {k: self._generate_md_field_schema(k, v, deco │
+backend-1  | │    833 │   │   │   │   │   │   computed_fields=[                             │
+backend-1  | │    834 │   │   │   │   │   │   │   self._computed_field_schema(d, decorators │
+backend-1  | │    835 │   │   │   │   │   │   │   for d in computed_fields.values()         │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │         .0 = <dict_itemiterator object at 0xffff8e7ac220>                │ │
+backend-1  | │ │ decorators = DecoratorInfos(                                             │ │
+backend-1  | │ │              │   validators={},                                          │ │
+backend-1  | │ │              │   field_validators={},                                    │ │
+backend-1  | │ │              │   root_validators={},                                     │ │
+backend-1  | │ │              │   field_serializers={},                                   │ │
+backend-1  | │ │              │   model_serializers={},                                   │ │
+backend-1  | │ │              │   model_validators={},                                    │ │
+backend-1  | │ │              │   computed_fields={}                                      │ │
+backend-1  | │ │              )                                                           │ │
+backend-1  | │ │          k = 'product_category'                                          │ │
+backend-1  | │ │       self = <pydantic._internal._generate_schema.GenerateSchema object  │ │
+backend-1  | │ │              at 0xffff8e7ac180>                                          │ │
+backend-1  | │ │          v = FieldInfo(annotation=SystemError, required=True)            │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1201 in _generate_md_field_schema                                         │
+backend-1  | │                                                                              │
+backend-1  | │   1198 │   │   decorators: DecoratorInfos,                                   │
+backend-1  | │   1199 │   ) -> core_schema.ModelField:                                      │
+backend-1  | │   1200 │   │   """Prepare a ModelField to represent a model field."""        │
+backend-1  | │ ❱ 1201 │   │   common_field = self._common_field_schema(name, field_info, de │
+backend-1  | │   1202 │   │   return core_schema.model_field(                               │
+backend-1  | │   1203 │   │   │   common_field['schema'],                                   │
+backend-1  | │   1204 │   │   │   serialization_exclude=common_field['serialization_exclude │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ decorators = DecoratorInfos(                                             │ │
+backend-1  | │ │              │   validators={},                                          │ │
+backend-1  | │ │              │   field_validators={},                                    │ │
+backend-1  | │ │              │   root_validators={},                                     │ │
+backend-1  | │ │              │   field_serializers={},                                   │ │
+backend-1  | │ │              │   model_serializers={},                                   │ │
+backend-1  | │ │              │   model_validators={},                                    │ │
+backend-1  | │ │              │   computed_fields={}                                      │ │
+backend-1  | │ │              )                                                           │ │
+backend-1  | │ │ field_info = FieldInfo(annotation=SystemError, required=True)            │ │
+backend-1  | │ │       name = 'product_category'                                          │ │
+backend-1  | │ │       self = <pydantic._internal._generate_schema.GenerateSchema object  │ │
+backend-1  | │ │              at 0xffff8e7ac180>                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1367 in _common_field_schema                                              │
+backend-1  | │                                                                              │
+backend-1  | │   1364 │   │   │   │   │   source_type, annotations + validators_from_decora │
+backend-1  | │   1365 │   │   │   │   )                                                     │
+backend-1  | │   1366 │   │   │   else:                                                     │
+backend-1  | │ ❱ 1367 │   │   │   │   schema = self._apply_annotations(                     │
+backend-1  | │   1368 │   │   │   │   │   source_type,                                      │
+backend-1  | │   1369 │   │   │   │   │   annotations + validators_from_decorators,         │
+backend-1  | │   1370 │   │   │   │   )                                                     │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │                annotations = []                                          │ │
+backend-1  | │ │                 decorators = DecoratorInfos(                             │ │
+backend-1  | │ │                              │   validators={},                          │ │
+backend-1  | │ │                              │   field_validators={},                    │ │
+backend-1  | │ │                              │   root_validators={},                     │ │
+backend-1  | │ │                              │   field_serializers={},                   │ │
+backend-1  | │ │                              │   model_serializers={},                   │ │
+backend-1  | │ │                              │   model_validators={},                    │ │
+backend-1  | │ │                              │   computed_fields={}                      │ │
+backend-1  | │ │                              )                                           │ │
+backend-1  | │ │                 field_info = FieldInfo(                                  │ │
+backend-1  | │ │                              │   annotation=SystemError,                 │ │
+backend-1  | │ │                              │   required=True                           │ │
+backend-1  | │ │                              )                                           │ │
+backend-1  | │ │                       name = 'product_category'                          │ │
+backend-1  | │ │                       self = <pydantic._internal._generate_schema.Gener… │ │
+backend-1  | │ │                              object at 0xffff8e7ac180>                   │ │
+backend-1  | │ │ validators_from_decorators = []                                          │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:2279 in _apply_annotations                                                │
+backend-1  | │                                                                              │
+backend-1  | │   2276 │   │   │   │   get_inner_schema, annotation, pydantic_js_annotation_ │
+backend-1  | │   2277 │   │   │   )                                                         │
+backend-1  | │   2278 │   │                                                                 │
+backend-1  | │ ❱ 2279 │   │   schema = get_inner_schema(source_type)                        │
+backend-1  | │   2280 │   │   if pydantic_js_annotation_functions:                          │
+backend-1  | │   2281 │   │   │   core_metadata = schema.setdefault('metadata', {})         │
+backend-1  | │   2282 │   │   │   update_core_metadata(core_metadata, pydantic_js_annotatio │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │                      annotations = []                                    │ │
+backend-1  | │ │                 get_inner_schema = <pydantic._internal._schema_generati… │ │
+backend-1  | │ │                                    object at 0xffff8e79b8e0>             │ │
+backend-1  | │ │ pydantic_js_annotation_functions = []                                    │ │
+backend-1  | │ │                             self = <pydantic._internal._generate_schema… │ │
+backend-1  | │ │                                    object at 0xffff8e7ac180>             │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_schema_generatio │
+backend-1  | │ n_shared.py:83 in __call__                                                   │
+backend-1  | │                                                                              │
+backend-1  | │    80 │   │   self._ref_mode = ref_mode                                      │
+backend-1  | │    81 │                                                                      │
+backend-1  | │    82 │   def __call__(self, source_type: Any, /) -> core_schema.CoreSchema: │
+backend-1  | │ ❱  83 │   │   schema = self._handler(source_type)                            │
+backend-1  | │    84 │   │   if self._ref_mode == 'to-def':                                 │
+backend-1  | │    85 │   │   │   ref = schema.get('ref')                                    │
+backend-1  | │    86 │   │   │   if ref is not None:                                        │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._schema_generation_shared.CallbackGetCoreSch… │ │
+backend-1  | │ │        object at 0xffff8e79b8e0>                                         │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:2261 in inner_handler                                                     │
+backend-1  | │                                                                              │
+backend-1  | │   2258 │   │   │   schema = self._generate_schema_from_get_schema_method(obj │
+backend-1  | │   2259 │   │   │                                                             │
+backend-1  | │   2260 │   │   │   if schema is None:                                        │
+backend-1  | │ ❱ 2261 │   │   │   │   schema = self._generate_schema_inner(obj)             │
+backend-1  | │   2262 │   │   │                                                             │
+backend-1  | │   2263 │   │   │   metadata_js_function = _extract_get_pydantic_json_schema( │
+backend-1  | │   2264 │   │   │   if metadata_js_function is not None:                      │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ schema = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff8e7ac180>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1004 in _generate_schema_inner                                            │
+backend-1  | │                                                                              │
+backend-1  | │   1001 │   │   if isinstance(obj, PydanticRecursiveRef):                     │
+backend-1  | │   1002 │   │   │   return core_schema.definition_reference_schema(schema_ref │
+backend-1  | │   1003 │   │                                                                 │
+backend-1  | │ ❱ 1004 │   │   return self.match_type(obj)                                   │
+backend-1  | │   1005 │                                                                     │
+backend-1  | │   1006 │   def match_type(self, obj: Any) -> core_schema.CoreSchema:  # noqa │
+backend-1  | │   1007 │   │   """Main mapping of types to schemas.                          │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff8e7ac180>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:1122 in match_type                                                        │
+backend-1  | │                                                                              │
+backend-1  | │   1119 │   │                                                                 │
+backend-1  | │   1120 │   │   if self._arbitrary_types:                                     │
+backend-1  | │   1121 │   │   │   return self._arbitrary_type_schema(obj)                   │
+backend-1  | │ ❱ 1122 │   │   return self._unknown_type_schema(obj)                         │
+backend-1  | │   1123 │                                                                     │
+backend-1  | │   1124 │   def _match_generic_type(self, obj: Any, origin: Any) -> CoreSchem │
+backend-1  | │   1125 │   │   # Need to handle generic dataclasses before looking for the s │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ origin = None                                                            │ │
+backend-1  | │ │   self = <pydantic._internal._generate_schema.GenerateSchema object at   │ │
+backend-1  | │ │          0xffff8e7ac180>                                                 │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | │                                                                              │
+backend-1  | │ /usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema. │
+backend-1  | │ py:634 in _unknown_type_schema                                               │
+backend-1  | │                                                                              │
+backend-1  | │    631 │   │   return core_schema.is_instance_schema(tp)                     │
+backend-1  | │    632 │                                                                     │
+backend-1  | │    633 │   def _unknown_type_schema(self, obj: Any) -> CoreSchema:           │
+backend-1  | │ ❱  634 │   │   raise PydanticSchemaGenerationError(                          │
+backend-1  | │    635 │   │   │   f'Unable to generate pydantic-core schema for {obj!r}. '  │
+backend-1  | │    636 │   │   │   'Set `arbitrary_types_allowed=True` in the model_config t │
+backend-1  | │    637 │   │   │   ' or implement `__get_pydantic_core_schema__` on your typ │
+backend-1  | │                                                                              │
+backend-1  | │ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+backend-1  | │ │ self = <pydantic._internal._generate_schema.GenerateSchema object at     │ │
+backend-1  | │ │        0xffff8e7ac180>                                                   │ │
+backend-1  | │ ╰──────────────────────────────────────────────────────────────────────────╯ │
+backend-1  | ╰──────────────────────────────────────────────────────────────────────────────╯
+backend-1  | PydanticSchemaGenerationError: Unable to generate pydantic-core schema for 
+backend-1  | <class 'SystemError'>. Set `arbitrary_types_allowed=True` in the model_config to
+backend-1  | ignore this error or implement `__get_pydantic_core_schema__` on your type to 
+backend-1  | fully support it.
+backend-1  | 
+backend-1  | If you got this error by calling handler(<some type>) within 
+backend-1  | `__get_pydantic_core_schema__` then you likely need to call 
+backend-1  | `handler.generate_schema(<some type>)` since we do not call 
+backend-1  | `__get_pydantic_core_schema__` on `<some type>` otherwise to avoid infinite 
+backend-1  | recursion.
+backend-1  | 
+backend-1  | For further information visit 
+backend-1  | https://errors.pydantic.dev/2.11/u/schema-for-unknown-type

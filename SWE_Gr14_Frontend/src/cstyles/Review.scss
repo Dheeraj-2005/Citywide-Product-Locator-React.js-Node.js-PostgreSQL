@@ -1,0 +1,94 @@
+/* Review.scss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.review-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background-color: #f9f9fc;
+    min-height: 100vh;
+    padding-top: 12rem;
+}
+
+.suggestions {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.suggestion-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.1);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.suggestion-card:hover {
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.product-top-row,
+.shop-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.view-shop-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: #667eea;
+    color: rgb(16, 14, 14);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.view-shop-btn:hover {
+    background-color: #5a67d8;
+}
+
+.row-info,
+.shop-info {
+    margin-top: 0.5rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.shop-details {
+    margin-top: 0.25rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.2rem;
+}
+
+.submitted-review {
+    background-color: #eef2ff;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 65%;
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.08);
+    margin-left: auto; /* Align to the right */
+}
+
+.submitted-review div {
+    margin-bottom: 0.4rem;
+}
+
+.submitted-review strong {
+    color: #444;
+}

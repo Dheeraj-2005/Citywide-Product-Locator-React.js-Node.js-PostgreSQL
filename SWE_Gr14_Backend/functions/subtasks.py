@@ -1,0 +1,3 @@
+"""
+Validate the email
+"""
